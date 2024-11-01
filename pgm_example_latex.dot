@@ -1,0 +1,41 @@
+digraph G {
+    bgcolor = "white";
+
+    node [shape = circle, style = filled, fillcolor = white];
+
+    A [texlbl = "$A_{X_{i}}$"];
+    B [texlbl = "$\mathcal{B}$"];
+    C [texlbl = "$C$"];
+    D [texlbl = "$D$"];
+    E [texlbl = "$E$"];
+    F [texlbl = "$F$"];
+    G [texlbl = "$G$"];
+    H [texlbl = "$H$"];
+
+    A -> C;
+    B -> C;
+    C -> D;
+    C -> E;
+    D -> F;
+    E -> F;
+    F -> G;
+    F -> H;
+
+    D [fillcolor = lightgray];
+    E [fillcolor = lightgray];
+    G [fillcolor = lightgray];
+
+    subgraph cluster_0 {
+        texlbl = "$X_{i}$";
+        labelloc = "b";
+        labeljust = "r";
+        style = rounded;
+        color = black;
+        A;
+        B;
+        C;
+        D;
+        E;
+        F;
+    }
+}
